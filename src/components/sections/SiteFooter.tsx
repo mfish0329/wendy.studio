@@ -1,0 +1,59 @@
+import { brand, contact, footer } from "@/content/site";
+
+export default function SiteFooter() {
+  // 靜態產生的頁面會在 build 時決定年份，重新部署即會更新
+  const currentYear = new Date().getFullYear();
+  const yearLabel =
+    currentYear > footer.since ? `${footer.since}–${currentYear}` : `${currentYear}`;
+
+  return (
+    <footer className="border-t border-line bg-surface/40">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-5 py-14 sm:px-8 md:flex-row md:items-start md:justify-between">
+        <div className="max-w-sm">
+          <p className="text-base font-semibold tracking-tight">{brand.name}</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted">
+            {footer.tagline}
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-3 text-sm">
+          <p className="text-xs tracking-widest text-muted/70 uppercase">
+            聯絡我們
+          </p>
+          <a
+            href={`mailto:${contact.email}`}
+            className="text-muted transition-colors hover:text-accent"
+          >
+            {contact.email}
+          </a>
+          {contact.line ? (
+            <a
+              href={contact.line.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted transition-colors hover:text-accent"
+            >
+              LINE {contact.line.label}
+            </a>
+          ) : null}
+          {contact.booking ? (
+            <a
+              href={contact.booking.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted transition-colors hover:text-accent"
+            >
+              {contact.booking.label}
+            </a>
+          ) : null}
+        </div>
+      </div>
+
+      <div className="border-t border-line/60">
+        <p className="mx-auto max-w-6xl px-5 py-6 text-xs text-muted/70 sm:px-8">
+          © {yearLabel} {brand.legalName}. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+}

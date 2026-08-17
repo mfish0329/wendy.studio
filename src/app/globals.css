@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* ── 設計 Token ────────────────────────────────────────────
+   要換品牌色，改這一區就好；下面所有元件都吃這些變數。      */
+@theme {
+  --color-bg: #0a0b0d;
+  --color-surface: #121419;
+  --color-surface-2: #171a20;
+  --color-line: #24272e;
+  --color-fg: #f5f6f8;
+  --color-muted: #9aa1ac;
+  --color-accent: #ff6b4a;
+  --color-accent-soft: #ffb4a0;
+
+  /* 中文網站的字型堆疊：拉丁文用 Geist，中文交給系統字型，
+     避免載入數 MB 的中文網頁字型拖慢 LCP。
+     若日後要換成品牌指定字型，改這一行即可。 */
+  --font-sans:
+    var(--font-geist-sans), "PingFang TC", "Noto Sans TC",
+    "Microsoft JhengHei", "Hiragino Sans", system-ui, sans-serif;
+
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  --animate-reveal: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 錨點捲動時，讓標題不要被 sticky header 蓋住 */
+  scroll-padding-top: 5rem;
+  background-color: var(--color-bg);
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  /* 中文字距稍微拉開，閱讀更舒服 */
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 進場動畫：只有在 JS 可用時才隱藏元素（<html class="js"> 由 layout 的
+   inline script 在首次繪製前加上），關閉 JS 的訪客一樣看得到完整內容。 */
+.js [data-reveal] {
+  opacity: 0;
+}
+
+.js [data-reveal][data-revealed] {
+  animation: var(--animate-reveal);
+}
+
+/* 鍵盤操作時才顯示的 focus 樣式 */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #0a0b0d;
+}
+
+/* 尊重使用者的減少動態偏好 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
