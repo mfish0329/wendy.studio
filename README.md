@@ -125,9 +125,18 @@ pnpm typecheck
 | --- | --- |
 | Root Directory | `apps/<版型>` |
 | Build Command | 預設即可（Vercel 會自動偵測 Turborepo） |
-| Ignored Build Step | `npx turbo-ignore` |
 
-`turbo-ignore` 會讓「只有 legal 站有改動」時不會重建其他三個站。
+**不需要設定 Ignored Build Step。** Vercel 內建的跳過機制會自動略過這次 commit
+沒有影響到的站 —— 只改 legal 站時，其他三站不會重建。這個行為對新專案預設開啟，
+開關在 Settings → Build and Deployment → Root Directory 區塊的 **Skip deployment**
+（要關掉才需要動它）。它不佔用同時建置的名額，而舊做法 `turbo-ignore` 那種
+「先建置再取消」會計入建置額度，已經不建議使用。
+
+內建跳過靠的是 workspace 的相依圖，這個 repo 剛好符合它的全部條件：GitHub repo、
+pnpm workspaces、每個套件的 `name` 唯一、套件之間的相依都寫在各自的 `package.json`。
+**維護時要守住最後一項** —— 如果某個 app 用了 `@wendy/content` 卻沒宣告在
+dependencies 裡，Vercel 判斷不出相依關係，改了共用文案也不會重建那一站。
+
 網域建議用子網域：`wendy.studio`（主站）、`hello.wendy.studio`（可愛版）、
 `law.wendy.studio`、`shop.wendy.studio`。
 
