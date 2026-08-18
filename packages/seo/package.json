@@ -1,0 +1,23 @@
+{
+  "name": "@wendy/seo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@wendy/content": "workspace:*"
+  },
+  "peerDependencies": {
+    "next": "catalog:"
+  },
+  "devDependencies": {
+    "@wendy/typescript-config": "workspace:*",
+    "next": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="訂單與出貨管理後台的畫面示意圖">
+  <rect width="1200" height="750" fill="#f6f6f7" />
+
+  <rect x="66" y="58" width="1068" height="634" rx="14" fill="#ffffff" stroke="#e2e2e6" />
+  <path d="M66 72a14 14 0 0 1 14-14h1040a14 14 0 0 1 14 14v26H66z" fill="#f6f6f7" />
+  <circle cx="92" cy="82" r="5" fill="#c9c9d1" />
+  <circle cx="110" cy="82" r="5" fill="#c9c9d1" />
+  <circle cx="128" cy="82" r="5" fill="#c9c9d1" />
+  <rect x="158" y="75" width="250" height="14" rx="7" fill="#e2e2e6" />
+
+  <!-- 標題與篩選 -->
+  <rect x="104" y="134" width="132" height="18" rx="9" fill="#101014" />
+  <rect x="104" y="166" width="200" height="10" rx="5" fill="#b9b9c2" />
+  <rect x="822" y="134" width="120" height="36" rx="18" fill="#ffffff" stroke="#e2e2e6" />
+  <rect x="962" y="134" width="134" height="36" rx="18" fill="#e11d48" />
+  <rect x="1002" y="146" width="54" height="12" rx="6" fill="#ffffff" />
+
+  <!-- 統計卡 -->
+  <rect x="104" y="204" width="238" height="98" rx="12" fill="#f6f6f7" />
+  <rect x="128" y="228" width="64" height="10" rx="5" fill="#b9b9c2" />
+  <rect x="128" y="252" width="52" height="24" rx="8" fill="#101014" />
+
+  <rect x="356" y="204" width="238" height="98" rx="12" fill="#f6f6f7" />
+  <rect x="380" y="228" width="64" height="10" rx="5" fill="#b9b9c2" />
+  <rect x="380" y="252" width="52" height="24" rx="8" fill="#101014" />
+
+  <rect x="608" y="204" width="238" height="98" rx="12" fill="#ffe4e9" />
+  <rect x="632" y="228" width="64" height="10" rx="5" fill="#be123c" opacity="0.6" />
+  <rect x="632" y="252" width="52" height="24" rx="8" fill="#be123c" />
+
+  <rect x="860" y="204" width="236" height="98" rx="12" fill="#f6f6f7" />
+  <rect x="884" y="228" width="64" height="10" rx="5" fill="#b9b9c2" />
+  <rect x="884" y="252" width="52" height="24" rx="8" fill="#101014" />
+
+  <!-- 表格標頭 -->
+  <rect x="104" y="336" width="992" height="40" rx="10" fill="#f6f6f7" />
+  <rect x="128" y="352" width="60" height="9" rx="4.5" fill="#5f5f6b" />
+  <rect x="288" y="352" width="60" height="9" rx="4.5" fill="#5f5f6b" />
+  <rect x="512" y="352" width="60" height="9" rx="4.5" fill="#5f5f6b" />
+  <rect x="736" y="352" width="60" height="9" rx="4.5" fill="#5f5f6b" />
+  <rect x="936" y="352" width="60" height="9" rx="4.5" fill="#5f5f6b" />
+
+  <!-- 訂單列 -->
+  <g>
+    <rect x="128" y="400" width="88" height="11" rx="5.5" fill="#101014" />
+    <rect x="288" y="400" width="130" height="11" rx="5.5" fill="#b9b9c2" />
+    <rect x="512" y="400" width="70" height="11" rx="5.5" fill="#101014" />
+    <rect x="736" y="394" width="92" height="24" rx="12" fill="#ffe4e9" />
+    <rect x="936" y="400" width="76" height="11" rx="5.5" fill="#b9b9c2" />
+    <line x1="104" y1="436" x2="1096" y2="436" stroke="#e2e2e6" />
+  </g>
+  <g>
+    <rect x="128" y="460" width="88" height="11" rx="5.5" fill="#101014" />
+    <rect x="288" y="460" width="112" height="11" rx="5.5" fill="#b9b9c2" />
+    <rect x="512" y="460" width="70" height="11" rx="5.5" fill="#101014" />
+    <rect x="736" y="454" width="92" height="24" rx="12" fill="#f6f6f7" />
+    <rect x="936" y="460" width="76" height="11" rx="5.5" fill="#b9b9c2" />
+    <line x1="104" y1="496" x2="1096" y2="496" stroke="#e2e2e6" />
+  </g>
+  <g>
+    <rect x="128" y="520" width="88" height="11" rx="5.5" fill="#101014" />
+    <rect x="288" y="520" width="144" height="11" rx="5.5" fill="#b9b9c2" />
+    <rect x="512" y="520" width="70" height="11" rx="5.5" fill="#101014" />
+    <rect x="736" y="514" width="92" height="24" rx="12" fill="#fef3c7" />
+    <rect x="936" y="520" width="76" height="11" rx="5.5" fill="#b9b9c2" />
+    <line x1="104" y1="556" x2="1096" y2="556" stroke="#e2e2e6" />
+  </g>
+  <g>
+    <rect x="128" y="580" width="88" height="11" rx="5.5" fill="#101014" />
+    <rect x="288" y="580" width="124" height="11" rx="5.5" fill="#b9b9c2" />
+    <rect x="512" y="580" width="70" height="11" rx="5.5" fill="#101014" />
+    <rect x="736" y="574" width="92" height="24" rx="12" fill="#f6f6f7" />
+    <rect x="936" y="580" width="76" height="11" rx="5.5" fill="#b9b9c2" />
+    <line x1="104" y1="616" x2="1096" y2="616" stroke="#e2e2e6" />
+  </g>
+  <g>
+    <rect x="128" y="640" width="88" height="11" rx="5.5" fill="#101014" />
+    <rect x="288" y="640" width="136" height="11" rx="5.5" fill="#b9b9c2" />
+    <rect x="512" y="640" width="70" height="11" rx="5.5" fill="#101014" />
+    <rect x="736" y="634" width="92" height="24" rx="12" fill="#ffe4e9" />
+    <rect x="936" y="640" width="76" height="11" rx="5.5" fill="#b9b9c2" />
+  </g>
+</svg>

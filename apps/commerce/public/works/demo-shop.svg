@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="選物品牌購物網站首頁的畫面示意圖">
+  <rect width="1200" height="750" fill="#f6f6f7" />
+
+  <!-- 瀏覽器視窗 -->
+  <rect x="66" y="58" width="1068" height="634" rx="14" fill="#ffffff" stroke="#e2e2e6" />
+  <path d="M66 72a14 14 0 0 1 14-14h1040a14 14 0 0 1 14 14v26H66z" fill="#f6f6f7" />
+  <circle cx="92" cy="82" r="5" fill="#c9c9d1" />
+  <circle cx="110" cy="82" r="5" fill="#c9c9d1" />
+  <circle cx="128" cy="82" r="5" fill="#c9c9d1" />
+  <rect x="158" y="75" width="250" height="14" rx="7" fill="#e2e2e6" />
+
+  <!-- 公告條 -->
+  <rect x="66" y="98" width="1068" height="24" fill="#101014" />
+  <rect x="512" y="105" width="176" height="9" rx="4.5" fill="#ffffff" opacity="0.85" />
+
+  <!-- 導覽列 -->
+  <rect x="104" y="142" width="104" height="15" rx="7.5" fill="#101014" />
+  <rect x="440" y="146" width="52" height="9" rx="4.5" fill="#b9b9c2" />
+  <rect x="512" y="146" width="52" height="9" rx="4.5" fill="#b9b9c2" />
+  <rect x="584" y="146" width="52" height="9" rx="4.5" fill="#b9b9c2" />
+  <circle cx="1016" cy="150" r="11" fill="#f6f6f7" />
+  <rect x="1046" y="136" width="52" height="28" rx="14" fill="#e11d48" />
+  <line x1="104" y1="182" x2="1096" y2="182" stroke="#e2e2e6" />
+
+  <!-- Hero banner -->
+  <rect x="104" y="206" width="992" height="212" rx="12" fill="#ffe4e9" />
+  <rect x="144" y="248" width="92" height="22" rx="11" fill="#e11d48" />
+  <rect x="144" y="292" width="360" height="22" rx="11" fill="#101014" />
+  <rect x="144" y="326" width="260" height="22" rx="11" fill="#101014" />
+  <rect x="144" y="370" width="140" height="34" rx="17" fill="#101014" />
+  <circle cx="900" cy="312" r="88" fill="#ffffff" opacity="0.75" />
+  <circle cx="900" cy="312" r="52" fill="#fecdd3" />
+
+  <!-- 商品卡 -->
+  <g>
+    <rect x="104" y="452" width="232" height="196" rx="12" fill="#ffffff" stroke="#e2e2e6" />
+    <rect x="104" y="452" width="232" height="112" rx="12" fill="#f6f6f7" />
+    <rect x="120" y="468" width="58" height="20" rx="10" fill="#e11d48" />
+    <circle cx="220" cy="516" r="34" fill="#e2e2e6" />
+    <rect x="124" y="584" width="132" height="12" rx="6" fill="#101014" />
+    <rect x="124" y="608" width="72" height="12" rx="6" fill="#be123c" />
+    <rect x="208" y="608" width="48" height="12" rx="6" fill="#c9c9d1" />
+  </g>
+  <g>
+    <rect x="358" y="452" width="232" height="196" rx="12" fill="#ffffff" stroke="#e2e2e6" />
+    <rect x="358" y="452" width="232" height="112" rx="12" fill="#f6f6f7" />
+    <circle cx="474" cy="516" r="34" fill="#e2e2e6" />
+    <rect x="378" y="584" width="118" height="12" rx="6" fill="#101014" />
+    <rect x="378" y="608" width="72" height="12" rx="6" fill="#be123c" />
+  </g>
+  <g>
+    <rect x="612" y="452" width="232" height="196" rx="12" fill="#ffffff" stroke="#e2e2e6" />
+    <rect x="612" y="452" width="232" height="112" rx="12" fill="#f6f6f7" />
+    <rect x="628" y="468" width="58" height="20" rx="10" fill="#fef3c7" />
+    <circle cx="728" cy="516" r="34" fill="#e2e2e6" />
+    <rect x="632" y="584" width="140" height="12" rx="6" fill="#101014" />
+    <rect x="632" y="608" width="72" height="12" rx="6" fill="#be123c" />
+  </g>
+  <g>
+    <rect x="866" y="452" width="230" height="196" rx="12" fill="#ffffff" stroke="#e2e2e6" />
+    <rect x="866" y="452" width="230" height="112" rx="12" fill="#f6f6f7" />
+    <circle cx="981" cy="516" r="34" fill="#e2e2e6" />
+    <rect x="886" y="584" width="126" height="12" rx="6" fill="#101014" />
+    <rect x="886" y="608" width="72" height="12" rx="6" fill="#be123c" />
+  </g>
+</svg>

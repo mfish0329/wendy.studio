@@ -1,0 +1,22 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# 版本目錄：四個站共用同一組相依版本，升級 Next.js 只需要改這裡一行。
+# 各 package.json 寫 "next": "catalog:" 即可對應到下面的版本。
+catalog:
+  next: 16.3.1
+  react: 19.2.8
+  react-dom: 19.2.8
+  "@types/node": ^20
+  "@types/react": ^19
+  "@types/react-dom": ^19
+  "@tailwindcss/postcss": ^4
+  tailwindcss: ^4
+  typescript: ^5
+  eslint: ^9
+  eslint-config-next: 16.3.1
+
+# eslint 的 native resolver 需要編譯，否則 lint 會失敗
+onlyBuiltDependencies:
+  - unrs-resolver

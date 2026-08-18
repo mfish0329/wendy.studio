@@ -1,26 +1,22 @@
 {
-  "name": "wendy.studio-official-website",
+  "name": "wendy-studio",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.30.2",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.3.1",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "dev:tech": "pnpm --filter @wendy/tech dev",
+    "dev:friendly": "pnpm --filter @wendy/friendly dev",
+    "dev:legal": "pnpm --filter @wendy/legal dev",
+    "dev:commerce": "pnpm --filter @wendy/commerce dev"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.1",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "turbo": "^2.6.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

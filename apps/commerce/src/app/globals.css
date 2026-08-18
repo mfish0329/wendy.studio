@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* ── 設計 Token ────────────────────────────────────────────
+   電商風格。白底、近黑字、桃紅強調色。
+   節奏比其他三站快：中等圓角、明顯陰影、hover 會上浮。
+
+   對比度已逐一驗算（WCAG AA 需要 4.5:1）：
+   - fg     #101014 on white … 18.9:1 ✓
+   - muted  #5f5f6b on white … 6.4:1  ✓
+   - accent #be123c on white … 6.4:1  ✓（文字用）
+   - white on accent-bright #e11d48 … 4.7:1 ✓（主要按鈕）
+   亮的 --color-accent-bright 只用於按鈕與標籤底色，不當白底上的文字色。 */
+@theme {
+  --color-bg: #ffffff;
+  --color-surface: #f6f6f7;
+  --color-surface-2: #ebebee;
+  --color-line: #e2e2e6;
+  --color-fg: #101014;
+  --color-muted: #5f5f6b;
+
+  --color-accent: #be123c;
+  --color-accent-bright: #e11d48;
+  --color-accent-soft: #ffe4e9;
+
+  /* 促銷用的琥珀色，只做標籤與點綴 */
+  --color-sale: #b45309;
+  --color-sale-soft: #fef3c7;
+
+  /* 拉丁文用 Inter，中文交給系統字型，
+     避免載入數 MB 的中文網頁字型拖慢 LCP。 */
+  --font-sans:
+    var(--font-inter), "PingFang TC", "Noto Sans TC", "Microsoft JhengHei",
+    "Hiragino Sans", system-ui, sans-serif;
+
+  --radius-card: 0.75rem;
+  --radius-pill: 999px;
+
+  /* 進場比其他站快，配合電商的節奏 */
+  --animate-reveal: reveal-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 錨點捲動時，讓標題不要被 sticky header 蓋住 */
+  scroll-padding-top: 5rem;
+  background-color: var(--color-bg);
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  /* 中文字距稍微拉開，閱讀更舒服 */
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 進場動畫：只有在 JS 可用時才隱藏元素（<html class="js"> 由 layout 的
+   inline script 在首次繪製前加上），關閉 JS 的訪客一樣看得到完整內容。 */
+.js [data-reveal] {
+  opacity: 0;
+}
+
+.js [data-reveal][data-revealed] {
+  animation: var(--animate-reveal);
+}
+
+/* 鍵盤操作時才顯示的 focus 樣式 */
+:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::selection {
+  background-color: var(--color-accent-soft);
+  color: var(--color-fg);
+}
+
+/* 尊重使用者的減少動態偏好 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

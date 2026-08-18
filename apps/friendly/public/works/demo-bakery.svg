@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="甜點店形象官網首頁畫面示意圖">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dff1ff" />
+      <stop offset="100%" stop-color="#f7fcff" />
+    </linearGradient>
+    <linearGradient id="heroSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e3f2ff" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#sky)" />
+
+  <!-- 裝飾：太陽與雲 -->
+  <circle cx="1090" cy="70" r="42" fill="#fbbf24" opacity="0.7" />
+  <ellipse cx="150" cy="60" rx="66" ry="26" fill="#ffffff" opacity="0.85" />
+  <ellipse cx="196" cy="52" rx="42" ry="22" fill="#ffffff" opacity="0.85" />
+
+  <!-- 瀏覽器視窗 -->
+  <rect x="70" y="66" width="1060" height="622" rx="26" fill="#ffffff" stroke="#d3e8f8" stroke-width="2" />
+  <path d="M70 92a26 26 0 0 1 26-26h1008a26 26 0 0 1 26 26v34H70z" fill="#f2f9ff" />
+  <line x1="70" y1="126" x2="1130" y2="126" stroke="#d3e8f8" stroke-width="2" />
+  <circle cx="104" cy="96" r="7" fill="#fb7185" />
+  <circle cx="128" cy="96" r="7" fill="#fbbf24" />
+  <circle cx="152" cy="96" r="7" fill="#6ee7b7" />
+  <rect x="186" y="86" width="280" height="20" rx="10" fill="#e3f2ff" />
+
+  <!-- 站台導覽列 -->
+  <circle cx="126" cy="166" r="13" fill="#38bdf8" />
+  <rect x="148" y="159" width="96" height="14" rx="7" fill="#123b5c" />
+  <rect x="700" y="161" width="56" height="10" rx="5" fill="#9dc4de" />
+  <rect x="776" y="161" width="56" height="10" rx="5" fill="#9dc4de" />
+  <rect x="852" y="161" width="56" height="10" rx="5" fill="#9dc4de" />
+  <rect x="936" y="151" width="128" height="30" rx="15" fill="#38bdf8" />
+
+  <!-- Hero 區 -->
+  <rect x="70" y="196" width="1060" height="248" fill="url(#heroSky)" />
+  <ellipse cx="960" cy="252" rx="70" ry="28" fill="#ffffff" opacity="0.9" />
+  <rect x="128" y="240" width="150" height="26" rx="13" fill="#e3f2ff" />
+  <rect x="128" y="292" width="520" height="26" rx="13" fill="#123b5c" />
+  <rect x="128" y="332" width="392" height="26" rx="13" fill="#123b5c" />
+  <rect x="128" y="382" width="360" height="14" rx="7" fill="#9dc4de" />
+  <rect x="128" y="408" width="240" height="14" rx="7" fill="#9dc4de" />
+
+  <!-- 商品卡片 -->
+  <g>
+    <rect x="128" y="486" width="300" height="164" rx="22" fill="#ffffff" stroke="#d3e8f8" stroke-width="2" />
+    <rect x="152" y="508" width="252" height="76" rx="16" fill="#fecdd3" />
+    <circle cx="200" cy="546" r="20" fill="#fb7185" opacity="0.6" />
+    <rect x="152" y="600" width="140" height="14" rx="7" fill="#123b5c" />
+    <rect x="152" y="624" width="96" height="10" rx="5" fill="#9dc4de" />
+  </g>
+  <g>
+    <rect x="450" y="486" width="300" height="164" rx="22" fill="#ffffff" stroke="#d3e8f8" stroke-width="2" />
+    <rect x="474" y="508" width="252" height="76" rx="16" fill="#fde68a" />
+    <circle cx="522" cy="546" r="20" fill="#fbbf24" opacity="0.7" />
+    <rect x="474" y="600" width="160" height="14" rx="7" fill="#123b5c" />
+    <rect x="474" y="624" width="88" height="10" rx="5" fill="#9dc4de" />
+  </g>
+  <g>
+    <rect x="772" y="486" width="300" height="164" rx="22" fill="#ffffff" stroke="#d3e8f8" stroke-width="2" />
+    <rect x="796" y="508" width="252" height="76" rx="16" fill="#bbf7d0" />
+    <circle cx="844" cy="546" r="20" fill="#6ee7b7" opacity="0.8" />
+    <rect x="796" y="600" width="128" height="14" rx="7" fill="#123b5c" />
+    <rect x="796" y="624" width="104" height="10" rx="5" fill="#9dc4de" />
+  </g>
+</svg>

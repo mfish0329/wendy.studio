@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="親子教室課表與報名頁面的畫面示意圖">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dff1ff" />
+      <stop offset="100%" stop-color="#f7fcff" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#sky3)" />
+  <ellipse cx="180" cy="58" rx="70" ry="26" fill="#ffffff" opacity="0.85" />
+  <circle cx="1080" cy="76" r="40" fill="#fbbf24" opacity="0.65" />
+
+  <rect x="70" y="66" width="1060" height="622" rx="26" fill="#ffffff" stroke="#d3e8f8" stroke-width="2" />
+  <path d="M70 92a26 26 0 0 1 26-26h1008a26 26 0 0 1 26 26v34H70z" fill="#f2f9ff" />
+  <line x1="70" y1="126" x2="1130" y2="126" stroke="#d3e8f8" stroke-width="2" />
+  <circle cx="104" cy="96" r="7" fill="#fb7185" />
+  <circle cx="128" cy="96" r="7" fill="#fbbf24" />
+  <circle cx="152" cy="96" r="7" fill="#6ee7b7" />
+  <rect x="186" y="86" width="280" height="20" rx="10" fill="#e3f2ff" />
+
+  <rect x="120" y="164" width="200" height="22" rx="11" fill="#123b5c" />
+  <rect x="120" y="200" width="300" height="12" rx="6" fill="#9dc4de" />
+  <rect x="852" y="166" width="102" height="38" rx="19" fill="#f2f9ff" />
+  <rect x="884" y="180" width="40" height="10" rx="5" fill="#9dc4de" />
+  <rect x="972" y="166" width="102" height="38" rx="19" fill="#38bdf8" />
+  <rect x="1004" y="180" width="40" height="10" rx="5" fill="#ffffff" />
+
+  <rect x="120" y="252" width="184" height="34" rx="17" fill="#e3f2ff" />
+  <rect x="184" y="264" width="56" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="320" y="252" width="184" height="34" rx="17" fill="#e3f2ff" />
+  <rect x="384" y="264" width="56" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="520" y="252" width="184" height="34" rx="17" fill="#e3f2ff" />
+  <rect x="584" y="264" width="56" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="720" y="252" width="184" height="34" rx="17" fill="#e3f2ff" />
+  <rect x="784" y="264" width="56" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="920" y="252" width="152" height="34" rx="17" fill="#e3f2ff" />
+  <rect x="972" y="264" width="48" height="10" rx="5" fill="#4b6e8a" />
+
+  <rect x="120" y="304" width="184" height="112" rx="20" fill="#e0f2fe" />
+  <rect x="144" y="328" width="104" height="12" rx="6" fill="#123b5c" />
+  <rect x="144" y="352" width="72" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="144" y="380" width="70" height="22" rx="11" fill="#38bdf8" />
+
+  <rect x="320" y="304" width="184" height="112" rx="20" fill="#fef3c7" />
+  <rect x="344" y="328" width="120" height="12" rx="6" fill="#123b5c" />
+  <rect x="344" y="352" width="64" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="344" y="380" width="70" height="22" rx="11" fill="#fbbf24" />
+
+  <rect x="720" y="304" width="184" height="112" rx="20" fill="#dcfce7" />
+  <rect x="744" y="328" width="96" height="12" rx="6" fill="#123b5c" />
+  <rect x="744" y="352" width="80" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="744" y="380" width="70" height="22" rx="11" fill="#6ee7b7" />
+
+  <rect x="320" y="432" width="184" height="112" rx="20" fill="#ffe4e6" />
+  <rect x="344" y="456" width="110" height="12" rx="6" fill="#123b5c" />
+  <rect x="344" y="480" width="68" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="344" y="508" width="70" height="22" rx="11" fill="#fb7185" />
+
+  <rect x="520" y="432" width="184" height="112" rx="20" fill="#e0f2fe" />
+  <rect x="544" y="456" width="88" height="12" rx="6" fill="#123b5c" />
+  <rect x="544" y="480" width="76" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="544" y="508" width="70" height="22" rx="11" fill="#38bdf8" />
+
+  <rect x="920" y="432" width="152" height="112" rx="20" fill="#fef3c7" />
+  <rect x="944" y="456" width="96" height="12" rx="6" fill="#123b5c" />
+  <rect x="944" y="480" width="60" height="10" rx="5" fill="#4b6e8a" />
+  <rect x="944" y="508" width="70" height="22" rx="11" fill="#fbbf24" />
+
+  <rect x="120" y="580" width="952" height="68" rx="22" fill="#f2f9ff" />
+  <circle cx="164" cy="614" r="18" fill="#38bdf8" />
+  <path d="M156 614l6 6 11-12" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="198" y="600" width="180" height="12" rx="6" fill="#123b5c" />
+  <rect x="198" y="622" width="260" height="10" rx="5" fill="#9dc4de" />
+  <rect x="898" y="596" width="140" height="40" rx="20" fill="#38bdf8" />
+  <rect x="938" y="610" width="60" height="12" rx="6" fill="#ffffff" />
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="法律事務所形象官網首頁的畫面示意圖">
+  <rect width="1200" height="750" fill="#f4f2ec" />
+
+  <!-- 瀏覽器視窗 -->
+  <rect x="70" y="62" width="1060" height="626" fill="#fbfaf8" stroke="#ddd7ca" />
+  <rect x="70" y="62" width="1060" height="40" fill="#eae6dd" />
+  <line x1="70" y1="102" x2="1130" y2="102" stroke="#ddd7ca" />
+  <circle cx="94" cy="82" r="5" fill="#c8c1b3" />
+  <circle cx="112" cy="82" r="5" fill="#c8c1b3" />
+  <circle cx="130" cy="82" r="5" fill="#c8c1b3" />
+  <rect x="160" y="75" width="260" height="14" fill="#ddd7ca" />
+
+  <!-- 站台導覽列 -->
+  <rect x="110" y="134" width="130" height="16" fill="#16232e" />
+  <rect x="700" y="138" width="62" height="9" fill="#9aa3ab" />
+  <rect x="786" y="138" width="62" height="9" fill="#9aa3ab" />
+  <rect x="872" y="138" width="62" height="9" fill="#9aa3ab" />
+  <rect x="962" y="128" width="128" height="30" fill="#16232e" />
+  <line x1="110" y1="178" x2="1090" y2="178" stroke="#ddd7ca" />
+
+  <!-- Hero -->
+  <rect x="110" y="222" width="52" height="2" fill="#a8863f" />
+  <rect x="110" y="252" width="620" height="26" fill="#16232e" />
+  <rect x="110" y="292" width="480" height="26" fill="#16232e" />
+  <rect x="110" y="348" width="430" height="11" fill="#9aa3ab" />
+  <rect x="110" y="372" width="360" height="11" fill="#9aa3ab" />
+  <rect x="110" y="416" width="152" height="40" fill="#16232e" />
+  <rect x="282" y="416" width="152" height="40" fill="none" stroke="#ddd7ca" />
+
+  <!-- 執業領域：三欄細線分隔 -->
+  <line x1="110" y1="518" x2="1090" y2="518" stroke="#ddd7ca" />
+  <line x1="436" y1="518" x2="436" y2="648" stroke="#ddd7ca" />
+  <line x1="764" y1="518" x2="764" y2="648" stroke="#ddd7ca" />
+
+  <rect x="110" y="546" width="26" height="9" fill="#a8863f" />
+  <rect x="110" y="572" width="150" height="15" fill="#16232e" />
+  <rect x="110" y="602" width="270" height="9" fill="#9aa3ab" />
+  <rect x="110" y="620" width="220" height="9" fill="#9aa3ab" />
+
+  <rect x="468" y="546" width="26" height="9" fill="#a8863f" />
+  <rect x="468" y="572" width="176" height="15" fill="#16232e" />
+  <rect x="468" y="602" width="262" height="9" fill="#9aa3ab" />
+  <rect x="468" y="620" width="200" height="9" fill="#9aa3ab" />
+
+  <rect x="796" y="546" width="26" height="9" fill="#a8863f" />
+  <rect x="796" y="572" width="140" height="15" fill="#16232e" />
+  <rect x="796" y="602" width="256" height="9" fill="#9aa3ab" />
+  <rect x="796" y="620" width="188" height="9" fill="#9aa3ab" />
+</svg>

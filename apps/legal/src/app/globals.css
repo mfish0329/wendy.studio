@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* ── 設計 Token ────────────────────────────────────────────
+   律師事務所專業感。象牙白底、墨藍字、金褐點綴。
+   這一站刻意不用圓角、不用陰影、不用彈跳動畫——
+   專業感來自留白、細線與克制。
+
+   對比度已逐一驗算（WCAG AA 需要 4.5:1）：
+   - fg     #16232e on #fbfaf8 … 15.4:1 ✓
+   - muted  #5a6670 on #fbfaf8 … 5.6:1  ✓
+   - accent #7a5c34 on #fbfaf8 … 6.0:1  ✓（可直接當文字色）
+   - #fbfaf8 on fg #16232e … 15.4:1 ✓（主要按鈕）  */
+@theme {
+  --color-bg: #fbfaf8;
+  --color-surface: #f4f2ec;
+  --color-surface-2: #eae6dd;
+  --color-line: #ddd7ca;
+  --color-fg: #16232e;
+  --color-muted: #5a6670;
+
+  /* 金褐：深的用來寫字，淺的只做裝飾線與標記 */
+  --color-accent: #7a5c34;
+  --color-accent-soft: #a8863f;
+
+  /* 標題用襯線體。中文交給系統明體，避免載入數 MB 的中文網頁字型；
+     內文維持黑體，長段落在螢幕上比較好讀。 */
+  --font-serif:
+    var(--font-lora), "Noto Serif TC", "Songti TC", "PMingLiU", "MingLiU",
+    Georgia, serif;
+
+  --font-sans:
+    "PingFang TC", "Noto Sans TC", "Microsoft JhengHei",
+    "Hiragino Sans", system-ui, sans-serif;
+
+  /* 進場只淡入、幾乎不位移，避免削弱正式感 */
+  --animate-reveal: reveal-fade 0.8s ease-out forwards;
+
+  @keyframes reveal-fade {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 錨點捲動時，讓標題不要被 sticky header 蓋住 */
+  scroll-padding-top: 5rem;
+  background-color: var(--color-bg);
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  /* 中文字距稍微拉開，閱讀更舒服 */
+  letter-spacing: 0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 進場動畫：只有在 JS 可用時才隱藏元素（<html class="js"> 由 layout 的
+   inline script 在首次繪製前加上），關閉 JS 的訪客一樣看得到完整內容。 */
+.js [data-reveal] {
+  opacity: 0;
+}
+
+.js [data-reveal][data-revealed] {
+  animation: var(--animate-reveal);
+}
+
+/* 鍵盤操作時才顯示的 focus 樣式 */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: var(--color-surface-2);
+  color: var(--color-fg);
+}
+
+/* 尊重使用者的減少動態偏好 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

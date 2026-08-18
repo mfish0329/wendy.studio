@@ -7,15 +7,3 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
-
-## 這個 repo 的結構（pnpm workspace）
-
-`next` 套件只裝在各個 app 底下，repo 根目錄沒有 `node_modules/next`。
-上面提到的版本對應文件請到 **`apps/tech/node_modules/next/dist/docs/`** 讀。
-
-- `apps/*` — 四個視覺版型，各自是獨立的 Next.js app，分開部署
-- `packages/content` — 全站文案的唯一來源，改動會影響所有 app
-- `packages/seo` — metadata / JSON-LD / sitemap / robots 產生器
-
-版面元件與 `globals.css` 刻意各站獨立、不共用；共用的是文案與 SEO 邏輯。
-詳見 [README.md](README.md)。

@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+/* ── 設計 Token ────────────────────────────────────────────
+   白底藍天可愛版。要換配色，改這一區就好。
+
+   對比度已逐一驗算（WCAG AA 需要 4.5:1）：
+   - muted   #4b6e8a on white … 5.3:1  ✓
+   - fg      #123b5c on white … 11.8:1 ✓
+   - accent-strong #0369a1 on white … 6.1:1 ✓（文字用）
+   - fg on accent #38bdf8 … 5.5:1 ✓（主要按鈕）
+   明亮的 --color-accent 只用於色塊與裝飾，不直接當白底上的文字色。  */
+@theme {
+  --color-bg: #ffffff;
+  --color-surface: #f2f9ff;
+  --color-surface-2: #e3f2ff;
+  --color-line: #d3e8f8;
+  --color-fg: #123b5c;
+  --color-muted: #4b6e8a;
+
+  /* 天空藍：亮的用來塗色塊，深的用來寫字 */
+  --color-accent: #38bdf8;
+  --color-accent-soft: #7dd3fc;
+  --color-accent-strong: #0369a1;
+
+  /* 點綴色，讓畫面不會只有一種藍 */
+  --color-sun: #fbbf24;
+  --color-blush: #fb7185;
+
+  /* 拉丁文用 Nunito（圓潤好親近），中文交給系統字型，
+     避免載入數 MB 的中文網頁字型拖慢 LCP。 */
+  --font-sans:
+    var(--font-nunito), "PingFang TC", "Noto Sans TC", "Microsoft JhengHei",
+    "Hiragino Sans", system-ui, sans-serif;
+
+  /* 可愛感主要來自大圓角，統一在這裡定義 */
+  --radius-cute: 1.5rem;
+  --radius-pill: 999px;
+
+  /* 進場帶一點回彈，比主站的科技感版本活潑 */
+  --animate-reveal: reveal-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+
+  @keyframes reveal-pop {
+    from {
+      opacity: 0;
+      transform: translateY(16px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 錨點捲動時，讓標題不要被 sticky header 蓋住 */
+  scroll-padding-top: 5rem;
+  background-color: var(--color-bg);
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  /* 中文字距稍微拉開，閱讀更舒服 */
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 進場動畫：只有在 JS 可用時才隱藏元素（<html class="js"> 由 layout 的
+   inline script 在首次繪製前加上），關閉 JS 的訪客一樣看得到完整內容。 */
+.js [data-reveal] {
+  opacity: 0;
+}
+
+.js [data-reveal][data-revealed] {
+  animation: var(--animate-reveal);
+}
+
+/* 鍵盤操作時才顯示的 focus 樣式 */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+::selection {
+  background-color: var(--color-accent-soft);
+  color: var(--color-fg);
+}
+
+/* 尊重使用者的減少動態偏好：連雲朵飄動也一起停掉 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
